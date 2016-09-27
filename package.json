@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "simplified URL shortener application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanedw1/URL-Shortener.git"
+  },
+  "author": "seanedw1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seanedw1/URL-Shortener/issues"
+  },
+  "homepage": "https://github.com/seanedw1/URL-Shortener#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
