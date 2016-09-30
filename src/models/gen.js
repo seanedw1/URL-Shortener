@@ -1,0 +1,4 @@
+exports.shortlink = () => {
+  dwljs;
+
+}

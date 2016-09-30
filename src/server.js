@@ -1,11 +1,14 @@
 const express = require('express');
-const body_parser = require('body-parser');
+const bodyParser = require('body-parser');
+const port = 3000;
 const app = express();
 
-// config
-const port = 3000;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
-app.listen(port, ()=> {
-  console.log('server active on', port);
-})
+app.use('/api', require('./routes/api/api')(express));
+
+const server = app.listen(port);
+
+module.exports = server;
