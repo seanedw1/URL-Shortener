@@ -8,7 +8,6 @@ Install all dependencies.
 
 ```
 npm i
-
 ```
 
 ## Endpoints
