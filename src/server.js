@@ -1,14 +1,30 @@
+// sets contant express module
 const express = require('express');
+
+// sets contant body parser module
 const bodyParser = require('body-parser');
-const port = 3000;
+
+// express functionality
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// sets port to 3000
+const port = 3000;
+
+// parses text as json
 app.use(bodyParser.json());
 
+// parses text as url encoded data
+app.use(bodyParser.urlencoded({
+  extended: true,
+}));
 
-app.use('/api', require('./routes/api/api')(express));
+// link routes
+app.use('/api/v1', require('./routes/api/url')(express));
 
-const server = app.listen(port);
+// sets server to listening port
+const server = app.listen(port, () => {
+  console.log('server active on ' + port);
+});
 
+// makes server modular
 module.exports = server;
