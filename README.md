@@ -9,6 +9,15 @@ Install all dependencies.
 ```
 npm i
 ```
+## server
+
+to run the server
+
+```
+node src/server
+```
+
+
 
 ## Endpoints
 
