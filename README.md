@@ -67,7 +67,7 @@ GET localhost:3000/api/v1/users - get users
 ]
 ```
 
-GET localhost:3000/api/v1/:id - get users by id
+GET localhost:3000/api/v1/users/:id - get users by id
 
 ```json
 {
