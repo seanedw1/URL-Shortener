@@ -36,47 +36,49 @@ GET localhost:3000/api/v1/users - get users
 
 ```json
 
-{
-  id: 1,
-  name: 'david',
-  username: 'david12',
-  password: 'reojgoifdklm',
-  createdAt: '2016-10-08T01:45:31.000Z',
-  updatedAt: '2016-10-08T01:45:31.000Z',
-  urls: [],
-},
-{
-  id: 2,
-  name: 'peter',
-  username: 'peterpanman',
-  password: 'reojgoifdklm',
-  createdAt: '2016-10-08T01:45:31.000Z',
-  updatedAt: '2016-10-08T01:45:31.000Z',
-  urls: [],
-},
-{
-  id: 3,
-  name: 'dan',
-  username: 'dantheman',
-  password: 'reojgoifdklm',
-  createdAt: '2016-10-08T01:45:31.000Z',
-  updatedAt: '2016-10-08T01:45:31.000Z',
-  urls: [],
-},
+[
+  {
+    "id": 1,
+    "name": "david",
+    "username": "david12",
+    "password": "reojgoifdklm",
+    "createdAt": "2016-10-08T01:45:31.000Z",
+    "updatedAt": "2016-10-08T01:45:31.000Z",
+    "urls": []
+  },
+  {
+    "id": 2,
+    "name": "peter",
+    "username": "peterpanman",
+    "password": "reojgoifdklm",
+    "createdAt": "2016-10-08T01:45:31.000Z",
+    "updatedAt": "2016-10-08T01:45:31.000Z",
+    "urls": []
+  },
+  {
+    "id": 3,
+    "name": "dan",
+    "username": "dantheman",
+    "password": "reojgoifdklm",
+    "createdAt": "2016-10-08T01:45:31.000Z",
+    "updatedAt": "2016-10-08T01:45:31.000Z",
+    "urls": []
+  }
+]
 ```
 
 GET localhost:3000/api/v1/:id - get users by id
 
 ```json
-
 {
-  id: 1,
-  name: 'david',
-  username: 'david12',
-  password: 'reojgoifdklm',
-  createdAt: '2016-10-08T01:45:31.000Z',
-  updatedAt: '2016-10-08T01:45:31.000Z',
-  urls: [],
+  "id": 3,
+  "name": "dan",
+  "username": "dantheman",
+  "password": "reojgoifdklm",
+  "tokenreq": "true",
+  "createdAt": "2016-10-08T01:45:31.000Z",
+  "updatedAt": "2016-10-08T01:45:31.000Z",
+  "urls": []
 }
 ```
 
