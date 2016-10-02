@@ -1,5 +1,17 @@
+const user = require('../../models/user');
+
 module.exports = (express) => {
   const router = express.Router();
+
+  // create
+  router.post('/users', (req, res) => {
+    user.create(req.body, (err) => {
+      res.status(500).json(err);
+    }), (data) => {
+      res.status(200).json(data);
+    };
+  });
+
 
 // route for users
   router.get('/users', (req, res) => {
