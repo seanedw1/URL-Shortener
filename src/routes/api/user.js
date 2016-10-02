@@ -21,20 +21,26 @@ module.exports = (express) => {
     });
   });
 
-
-// route for user by id
+  //  get by id
   router.get('/users/:id', (req, res) => {
-    res.json(
-      {
-        id: 3,
-        name: 'dan',
-        username: 'dantheman',
-        password: 'reojgoifdklm',
-        tokenreq: 'true',
-        createdAt: '2016-10-08T01:45:31.000Z',
-        updatedAt: '2016-10-08T01:45:31.000Z',
-        urls: [],
-      });
+    const rb = req.body;
+    rb.id = req.params.id;
+    user.find(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
+
+  //  delete
+  router.get('/users/:id', (req, res) => {
+    const rb = req.body;
+    rb.id = req.params.id;
+    user.find(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
   });
 
 // returns correct data
