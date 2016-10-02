@@ -12,38 +12,15 @@ module.exports = (express) => {
     });
   });
 
-// route for users
+// get
   router.get('/users', (req, res) => {
-    res.json([
-      {
-        id: 1,
-        name: 'david',
-        username: 'david12',
-        password: 'reojgoifdklm',
-        createdAt: '2016-10-08T01:45:31.000Z',
-        updatedAt: '2016-10-08T01:45:31.000Z',
-        urls: [],
-      },
-      {
-        id: 2,
-        name: 'peter',
-        username: 'peterpanman',
-        password: 'reojgoifdklm',
-        createdAt: '2016-10-08T01:45:31.000Z',
-        updatedAt: '2016-10-08T01:45:31.000Z',
-        urls: [],
-      },
-      {
-        id: 3,
-        name: 'dan',
-        username: 'dantheman',
-        password: 'reojgoifdklm',
-        createdAt: '2016-10-08T01:45:31.000Z',
-        updatedAt: '2016-10-08T01:45:31.000Z',
-        urls: [],
-      },
-    ]);
+    user.findAll((err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
   });
+
 
 // route for user by id
   router.get('/users/:id', (req, res) => {
