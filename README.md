@@ -44,10 +44,76 @@ POST localhost:3000/api/v1/url - Create shortened link
 
 ```json
 {
+  "olink": "http://bs.com/66vo7fl7ar8"
+}
+```
+
+GET localhost:3000/api/v1/urls - get urls
+
+```json
+
+[
+  {
+    "id": 1,
+    "olink": "http://www.exampleurl.com",
+    "slink": "http://bs.com/66vo7fl7r8",
+    "createdAt": "2016-10-02T22:19:27.000Z",
+    "updatedAt": "2016-10-02T22:19:27.000Z",
+    "userID": null
+  },
+  {
+    "id": 2,
+    "olink": "http://www.testurl1.com",
+    "slink": "http://bs.com/66vo7fl7aq8",
+    "createdAt": "2016-10-02T22:19:27.000Z",
+    "updatedAt": "2016-10-02T22:19:27.000Z",
+    "userID": null
+  },
+  {
+    "id": 3,
+    "olink": "http://www.exampleurl2.com",
+    "slink": "http://bs.com/66vo7fliar8",
+    "createdAt": "2016-10-02T22:19:27.000Z",
+    "updatedAt": "2016-10-02T22:19:27.000Z",
+    "userID": null
+  }
+]
+```
+
+GET localhost:3000/api/v1/urls/:id - get url by id
+
+```json
+{
+  "id": 1,
+  "olink": "http://www.exampleurl.com",
+  "slink": "http://bs.com/66vo7fl7ar8",
+  "createdAt": "2016-10-02T22:19:27.000Z",
+  "updatedAt": "2016-10-02T22:19:27.000Z",
+  "userID": null
+}
+```
+
+POST localhost:3000/api/v1/urls/:id - update url
+
+```json
+  "olink": "http://www.example.com",
+  "slink": "http://bs.com/66vo7fl7ar8",
+```
+
+DELETE localhost:3000/api/v1/urls/:id - delete user
+
+```json
+1
+```
+### Users
+
+POST localhost:3000/api/v1/users - Create user
+
+```json
+{
   "URL": "http://bs.com/66vo7fl7ar8"
 }
 ```
-### Users
 
 GET localhost:3000/api/v1/users - get users
 
@@ -84,7 +150,7 @@ GET localhost:3000/api/v1/users - get users
 ]
 ```
 
-GET localhost:3000/api/v1/users/:id - get users by id
+GET localhost:3000/api/v1/users/:id - get user by id
 
 ```json
 {
@@ -97,6 +163,21 @@ GET localhost:3000/api/v1/users/:id - get users by id
   "updatedAt": "2016-10-08T01:45:31.000Z",
   "urls": []
 }
+```
+
+POST localhost:3000/api/v1/users/:id - update user
+
+```json
+{
+  "name": "bart",
+  "username": "simpsonsfan",
+}
+```
+
+DELETE localhost:3000/api/v1/users/:id - delete user
+
+```json
+1
 ```
 
 ##### Contributors
