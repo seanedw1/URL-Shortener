@@ -32,6 +32,17 @@ module.exports = (express) => {
     });
   });
 
+  //  update
+  router.post('/users/:id', (req, res) => {
+    const rb = req.body;
+    rb.id = req.params.id;
+    user.update(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
+
   //  delete
   router.delete('/users/:id', (req, res) => {
     const rb = req.body;
