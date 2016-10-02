@@ -33,10 +33,10 @@ module.exports = (express) => {
   });
 
   //  delete
-  router.get('/users/:id', (req, res) => {
+  router.delete('/users/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
-    user.find(req.body, (err) => {
+    user.destroy(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
