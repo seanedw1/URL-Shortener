@@ -7,11 +7,10 @@ module.exports = (express) => {
   router.post('/users', (req, res) => {
     user.create(req.body, (err) => {
       res.status(500).json(err);
-    }), (data) => {
+    }, (data) => {
       res.status(200).json(data);
-    };
+    });
   });
-
 
 // route for users
   router.get('/users', (req, res) => {

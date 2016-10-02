@@ -14,7 +14,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 });
 
 const user = sequelize.define('user', {
-  full_name: {
+  name: {
     type: Sequelize.STRING,
   },
   username: {
