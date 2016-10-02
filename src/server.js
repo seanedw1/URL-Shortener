@@ -19,10 +19,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // link routes
-app.use('/api/v1', require('./routes/api/api')(express));
-app.use('/api/v1', require('./routes/api/url')(express));
-app.use('/api/v1', require('./routes/api/user')(express));
-
+app.use('/', require('./routes')(express));
 
 // sets server to listening port
 const server = app.listen(port, () => {

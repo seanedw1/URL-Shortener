@@ -9,7 +9,7 @@ Install all dependencies.
 ```
 npm i
 ```
-## server
+## Server
 
 to run the server
 
@@ -17,9 +17,26 @@ to run the server
 node src/server
 ```
 
-
-
 ## Endpoints
+
+### Index
+
+GET http://localhost:3000/ - index hello world
+
+```json
+{
+  "hello": "world"
+}
+```
+### Status
+
+GET http://localhost:3000/status - api status
+
+```json
+{
+  "healty": true
+}
+```
 
 ### URL
 
