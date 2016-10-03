@@ -14,7 +14,7 @@ module.exports = (express) => {
 // linking routes
   router.use('/api/v1/', require('./api/url')(express));
   router.use('/api/v1/', require('./api/user')(express));
-  // router.use('/go/', require('./go/redirect')(express));
+  router.use('/go/', require('./go/redirect')(express));
 
 
 // returns correct data

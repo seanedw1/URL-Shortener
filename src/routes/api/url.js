@@ -1,5 +1,5 @@
 // links to link generation model
-// const est = require('../../models/gen');
+const gen = require('../../models/gen');
 const url = require('../../models/url');
 
 // accepts express as a parameter of express
@@ -7,15 +7,11 @@ module.exports = (express) => {
   // express router function
   const router = express.Router();
 
-  // // post method
-  // router.post('/url', (req, res) => {
-  //     // console.log(req.body.link);
-  //     // respond with link
-  //   res.json(est.genURL(req.body.link));
-  // });
-
-  // create
+  //  create
   router.post('/urls', (req, res) => {
+    const rb = req.body;
+    rb.url = req.params.url;
+    rb.shortURL = gen.genURL(url);
     url.create(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {

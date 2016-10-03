@@ -10,7 +10,7 @@ module.exports = (express) => {
     url.redirect(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
-      res.status(200).redirect('/status');
+      res.status(200).redirect(data);
     });
   });
 
