@@ -1,5 +1,5 @@
 // links to link generation model
-const est = require('../../models/gen');
+// const est = require('../../models/gen');
 const url = require('../../models/url');
 
 // accepts express as a parameter of express
@@ -20,9 +20,6 @@ module.exports = (express) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
-      // console.log(req.body.link);
-      // respond with link
-      res.json(est.genURL(req.body.link));
     });
   });
 

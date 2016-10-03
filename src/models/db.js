@@ -20,15 +20,8 @@ const user = sequelize.define('user', {
   username: {
     type: Sequelize.STRING,
   },
-  password_hash: {
-    type: Sequelize.STRING,
-  },
   password: {
-    type: Sequelize.VIRTUAL,
-    set: (val) => {
-      this.setDataValue('password', val);
-      this.setDataValue('password_hash', this.salt + val);
-    },
+    type: Sequelize.STRING,
   },
   tokenreq: {
     type: Sequelize.BOOLEAN,
@@ -36,10 +29,10 @@ const user = sequelize.define('user', {
 });
 
 const url = sequelize.define('url', {
-  olink: {
+  url: {
     type: Sequelize.STRING,
   },
-  slink: {
+  shortURL: {
     type: Sequelize.STRING,
   },
 });

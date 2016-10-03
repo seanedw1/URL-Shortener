@@ -44,7 +44,7 @@ POST localhost:3000/api/v1/url - Create shortened link
 
 ```json
 {
-  "olink": "http://bs.com/66vo7fl7ar8"
+  "url": "http://bs.com/66vo7fl7ar8"
 }
 ```
 
@@ -55,24 +55,24 @@ GET localhost:3000/api/v1/urls - get urls
 [
   {
     "id": 1,
-    "olink": "http://www.exampleurl.com",
-    "slink": "http://bs.com/66vo7fl7r8",
+    "url": "http://www.exampleurl.com",
+    "shortURL": "http://bs.com/66vo7fl7r8",
     "createdAt": "2016-10-02T22:19:27.000Z",
     "updatedAt": "2016-10-02T22:19:27.000Z",
     "userID": null
   },
   {
     "id": 2,
-    "olink": "http://www.testurl1.com",
-    "slink": "http://bs.com/66vo7fl7aq8",
+    "url": "http://www.testurl1.com",
+    "shortURL": "http://bs.com/66vo7fl7aq8",
     "createdAt": "2016-10-02T22:19:27.000Z",
     "updatedAt": "2016-10-02T22:19:27.000Z",
     "userID": null
   },
   {
     "id": 3,
-    "olink": "http://www.exampleurl2.com",
-    "slink": "http://bs.com/66vo7fliar8",
+    "url": "http://www.exampleurl2.com",
+    "shortURL": "http://bs.com/66vo7fliar8",
     "createdAt": "2016-10-02T22:19:27.000Z",
     "updatedAt": "2016-10-02T22:19:27.000Z",
     "userID": null
@@ -85,8 +85,8 @@ GET localhost:3000/api/v1/urls/:id - get url by id
 ```json
 {
   "id": 1,
-  "olink": "http://www.exampleurl.com",
-  "slink": "http://bs.com/66vo7fl7ar8",
+  "url": "http://www.exampleurl.com",
+  "shortURL": "http://bs.com/66vo7fl7ar8",
   "createdAt": "2016-10-02T22:19:27.000Z",
   "updatedAt": "2016-10-02T22:19:27.000Z",
   "userID": null
@@ -96,11 +96,11 @@ GET localhost:3000/api/v1/urls/:id - get url by id
 POST localhost:3000/api/v1/urls/:id - update url
 
 ```json
-  "olink": "http://www.example.com",
-  "slink": "http://bs.com/66vo7fl7ar8",
+  "url": "http://www.example.com",
+  "shortURL": "http://bs.com/66vo7fl7ar8",
 ```
 
-DELETE localhost:3000/api/v1/urls/:id - delete user
+DELETE localhost:3000/api/v1/urls/:id - delete url
 
 ```json
 1
@@ -111,7 +111,10 @@ POST localhost:3000/api/v1/users - Create user
 
 ```json
 {
-  "URL": "http://bs.com/66vo7fl7ar8"
+  "name": "bart",
+  "username": "simpsonsfan",
+  "password": "testpass",
+
 }
 ```
 
@@ -178,6 +181,15 @@ DELETE localhost:3000/api/v1/users/:id - delete user
 
 ```json
 1
+```
+
+POST localhost:3000/go/:shortURL - redirect to short url
+
+```json
+{
+  "name": "bart",
+  "username": "simpsonsfan",
+}
 ```
 
 ##### Contributors

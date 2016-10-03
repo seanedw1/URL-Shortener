@@ -43,3 +43,12 @@ exports.destroy = (payload, err, success) => {
     },
   }).then(success).catch(err);
 };
+
+// redirect
+exports.redirect = (payload, err, success) => {
+  db.url.find({
+    where: {
+      shortURL: payload.shortURL,
+    },
+  }).then(success).catch(err);
+};
