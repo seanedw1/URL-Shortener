@@ -17,6 +17,21 @@ to run the server
 node src/server
 ```
 
+### ENV file
+
+create a env.json on root level for database connection
+
+```json
+{
+  "DB_NAME": "dbname",
+  "DB_USER": "dbuser",
+  "DB_PASS": "dbpass",
+  "DB_HOST": "localhost",
+  "DB_SCHEMA": "mysql",
+  "DB_PORT": "3306"
+}
+```
+
 ## Endpoints
 
 ### Index

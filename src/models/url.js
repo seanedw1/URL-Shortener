@@ -15,6 +15,7 @@ exports.find = (payload, err, success) => {
   db.url.find({
     where: {
       id: payload.id,
+      shortURL: payload.shortURL,
     },
     // find all relations in sequelize
     include: [{
