@@ -10,7 +10,6 @@ module.exports = (express) => {
   //  create
   router.post('/urls', (req, res) => {
     const rb = req.body;
-    rb.url = req.params.url;
     rb.shortURL = gen.genURL(url);
     url.create(req.body, (err) => {
       res.status(500).json(err);

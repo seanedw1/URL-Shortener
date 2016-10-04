@@ -7,7 +7,6 @@ module.exports = (express) => {
   router.get('/:shortURL', (req, res) => {
     const rb = req.body;
     rb.shortURL = req.params.shortURL;
-    console.log(rb.shortURL);
     url.find(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
