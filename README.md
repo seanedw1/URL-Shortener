@@ -198,13 +198,10 @@ DELETE localhost:3000/api/v1/users/:id - delete user
 1
 ```
 
-POST localhost:3000/go/:shortURL - redirect to short url
+GET localhost:3000/go/:shortURL - redirect to short url
 
 ```json
-{
-  "name": "bart",
-  "username": "simpsonsfan",
-}
+{}
 ```
 
 ##### Contributors

@@ -15,13 +15,21 @@ exports.find = (payload, err, success) => {
   db.url.find({
     where: {
       id: payload.id,
-      shortURL: payload.shortURL,
     },
     // find all relations in sequelize
     include: [{
       all: true,
       nested: true,
     }],
+  }).then(success).catch(err);
+};
+
+// redirect
+exports.go = (payload, err, success) => {
+  db.url.find({
+    where: {
+      shortURL: payload.shortURL,
+    },
   }).then(success).catch(err);
 };
 
