@@ -121,7 +121,7 @@ DELETE localhost:3000/api/v1/urls/:id - delete url
 1
 ```
 
-GET localhost:3000/go/:shortURL - redirect to short url
+GET localhost:3000/go/:shortURL - redirect based upon the short URL provided
 
 ```json
 {}
