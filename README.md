@@ -120,6 +120,13 @@ DELETE localhost:3000/api/v1/urls/:id - delete url
 ```json
 1
 ```
+
+GET localhost:3000/go/:shortURL - redirect to short url
+
+```json
+{}
+```
+
 ### Users
 
 POST localhost:3000/api/v1/users - Create user
@@ -198,11 +205,6 @@ DELETE localhost:3000/api/v1/users/:id - delete user
 1
 ```
 
-GET localhost:3000/go/:shortURL - redirect to short url
-
-```json
-{}
-```
 
 ##### Contributors
 [View Contributors](https://github.com/seanedw1/URL-Shortener/graphs/contributors)
