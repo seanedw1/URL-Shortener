@@ -52,14 +52,14 @@ node src/server
 
 ### crud for users
 * [create an user](#POST /api/v1/users - Create user)
-* [read all user](#GET /api/v1/users - get users)
+* [read all user](#GET-/api/v1/users -get-users)
 * [read user by id](#GET /api/v1/urls/:id - get url by id)
 * [update user](#POST /api/v1/urls/:id - update url)
 * [delete user](#DELETE /api/v1/users/:id - delete user)
 
 ### Index
 
- GET / - index hello world
+##### GET / - index hello world
 
 ```json
 {
@@ -68,7 +68,7 @@ node src/server
 ```
 ### Status
 
-GET /status - api status
+##### GET /status - api status
 
 ```json
 {
