@@ -40,6 +40,8 @@ module.exports = (express) => {
   router.post('/users/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
+    // hashes new password
+    rb.password = gen.generateHash(rb.password);
     user.update(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {

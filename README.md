@@ -10,7 +10,7 @@ Install all dependencies.
 npm i
 ```
 
-### ENV
+## ENV
 
 create a env.json on root level for database connection
 

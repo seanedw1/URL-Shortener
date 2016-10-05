@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 require('localenvironment');
 
+// defines db connection
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
   dialect: process.env.DB_SCHEMA,
@@ -13,6 +14,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   logging: false,
 });
 
+// defines user table
 const user = sequelize.define('user', {
   name: {
     type: Sequelize.STRING,
@@ -28,6 +30,7 @@ const user = sequelize.define('user', {
   },
 });
 
+// defines url table
 const url = sequelize.define('url', {
   url: {
     type: Sequelize.STRING,
