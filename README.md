@@ -36,8 +36,30 @@ node src/server
 ## Endpoints
 
 ### Index
+* [Hello world](#Index)
 
-GET / - index hello world
+### Status
+* [Api Status](#Status)
+
+### crud for urls
+* [create an url](#POST /api/v1/urls - Create shortened)
+* [read all url](#GET /api/v1/urls - get urls)
+* [read url by id](#GET /api/v1/urls/:id - get url by id
+)
+* [redirect based upon the short URL provided](#GET /go/:shortURL - redirect to short URL provided)
+* [update url](#POST /api/v1/urls/:id - update url)
+* [delete url](#DELETE /api/v1/urls/:id - delete url)
+
+### crud for users
+* [create an user](#POST /api/v1/users - Create user)
+* [read all user](#GET /api/v1/users - get users)
+* [read user by id](#GET /api/v1/urls/:id - get url by id)
+* [update user](#POST /api/v1/urls/:id - update url)
+* [delete user](#DELETE /api/v1/users/:id - delete user)
+
+### Index
+
+ GET / - index hello world
 
 ```json
 {
@@ -58,13 +80,12 @@ GET /status - api status
 
 POST /api/v1/urls - Create shortened link
 
+* when creating new urls include http://
+
 ```json
 {
-  "id": 1,
-  "url": "www.facebook.com",
+  "url": "http://www.facebook.com/",
   "shortURL": "8q6rdltjrl",
-  "updatedAt": "2016-10-04T22:07:39.000Z",
-  "createdAt": "2016-10-04T22:07:39.000Z"
 }
 ```
 
@@ -85,14 +106,6 @@ GET /api/v1/urls - get urls
     "shortURL": "8q6rdltjrl",
     "updatedAt": "2016-10-04T22:07:39.000Z",
     "createdAt": "2016-10-04T22:07:39.000Z"
-  }
-  {
-    "id": 1,
-    "url": "http://www.exampleurl.com",
-    "shortURL": "h66vo7fl7r8",
-    "createdAt": "2016-10-02T22:19:27.000Z",
-    "updatedAt": "2016-10-02T22:19:27.000Z",
-    "userID": null
   },
   {
     "id": 2,
