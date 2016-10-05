@@ -40,6 +40,7 @@ const url = sequelize.define('url', {
   },
 });
 
+// join between user and url
 user.hasMany(url, {
   foreignKey: 'userID',
 });

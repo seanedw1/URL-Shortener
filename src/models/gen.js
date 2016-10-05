@@ -10,14 +10,15 @@ exports.genURL = () => {
 
 // generates hash
 exports.generateHash = (payload) => {
-  // generates hash
+  // generates password hash
   const hash = bcrypt.hashSync(payload, bcrypt.genSaltSync(8));
   // returns hashed password
   return hash;
 };
 
-// validates hashed password
+// compares hashed password
 exports.validateHash = (payload) => {
+  // compares pasword returns in BOOLEAN
   const hash = bcrypt.compareSync(payload.password, this.localpassword);
   return hash;
 };

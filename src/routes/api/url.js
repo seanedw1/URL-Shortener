@@ -10,6 +10,7 @@ module.exports = (express) => {
   //  create
   router.post('/urls', (req, res) => {
     const rb = req.body;
+    // generates shorturl
     rb.shortURL = gen.genURL(url);
     url.create(req.body, (err) => {
       res.status(500).json(err);
@@ -27,7 +28,7 @@ module.exports = (express) => {
     });
   });
 
-    //  get by id
+  // get by id
   router.get('/urls/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
@@ -38,7 +39,7 @@ module.exports = (express) => {
     });
   });
 
-    //  update
+  // update
   router.post('/urls/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
@@ -49,7 +50,7 @@ module.exports = (express) => {
     });
   });
 
-    //  delete
+  // delete
   router.delete('/urls/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
@@ -60,6 +61,6 @@ module.exports = (express) => {
     });
   });
 
-// returns correct data
+  // returns correct data
   return router;
 };

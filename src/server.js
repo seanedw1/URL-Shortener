@@ -1,7 +1,4 @@
-// sets contant express module
 const express = require('express');
-
-// sets contant body parser module
 const bodyParser = require('body-parser');
 
 // express functionality

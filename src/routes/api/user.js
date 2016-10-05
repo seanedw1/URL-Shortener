@@ -16,7 +16,7 @@ module.exports = (express) => {
     });
   });
 
-// get
+  // get all
   router.get('/users', (req, res) => {
     user.findAll((err) => {
       res.status(500).json(err);
@@ -25,7 +25,7 @@ module.exports = (express) => {
     });
   });
 
-  //  get by id
+  // get by id
   router.get('/users/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
@@ -36,7 +36,7 @@ module.exports = (express) => {
     });
   });
 
-  //  update
+  // update
   router.post('/users/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
@@ -49,7 +49,7 @@ module.exports = (express) => {
     });
   });
 
-  //  delete
+  // delete
   router.delete('/users/:id', (req, res) => {
     const rb = req.body;
     rb.id = req.params.id;
@@ -60,6 +60,6 @@ module.exports = (express) => {
     });
   });
 
-// returns correct data
+  // returns correct data
   return router;
 };

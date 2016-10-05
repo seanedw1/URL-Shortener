@@ -12,6 +12,7 @@ exports.findAll = (err, success) => {
 
 // find by id
 exports.find = (payload, err, success) => {
+  // find where id is same as payload
   db.url.find({
     where: {
       id: payload.id,
@@ -26,6 +27,7 @@ exports.find = (payload, err, success) => {
 
 // redirect
 exports.go = (payload, err, success) => {
+  // finds where shortURL is same as payload
   db.url.find({
     where: {
       shortURL: payload.shortURL,

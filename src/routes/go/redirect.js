@@ -3,7 +3,7 @@ const url = require('../../models/url');
 module.exports = (express) => {
   const router = express.Router();
 
-  //  redirect
+  // redirect
   router.get('/:shortURL', (req, res) => {
     const rb = req.body;
     rb.shortURL = req.params.shortURL;

@@ -11,12 +11,11 @@ module.exports = (express) => {
     res.json({ healty: true });
   });
 
-// linking routes
+  // linking routes
   router.use('/api/v1/', require('./api/url')(express));
   router.use('/api/v1/', require('./api/user')(express));
   router.use('/go/', require('./go/redirect')(express));
 
-
-// returns correct data
+  // returns correct data
   return router;
 };
