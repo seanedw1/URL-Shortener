@@ -9,13 +9,6 @@ Install all dependencies.
 ```
 npm i
 ```
-## Server
-
-to run the server
-
-```
-node src/server
-```
 
 ### ENV
 
@@ -32,11 +25,19 @@ create a env.json on root level for database connection
 }
 ```
 
+## Server
+
+run the server
+
+```
+node src/server
+```
+
 ## Endpoints
 
 ### Index
 
-GET http://localhost:3000/ - index hello world
+GET / - index hello world
 
 ```json
 {
@@ -45,7 +46,7 @@ GET http://localhost:3000/ - index hello world
 ```
 ### Status
 
-GET http://localhost:3000/status - api status
+GET /status - api status
 
 ```json
 {
@@ -55,23 +56,40 @@ GET http://localhost:3000/status - api status
 
 ### URL
 
-POST localhost:3000/api/v1/url - Create shortened link
+POST /api/v1/urls - Create shortened link
 
 ```json
 {
-  "url": "http://bs.com/66vo7fl7ar8"
+  "id": 1,
+  "url": "www.facebook.com",
+  "shortURL": "8q6rdltjrl",
+  "updatedAt": "2016-10-04T22:07:39.000Z",
+  "createdAt": "2016-10-04T22:07:39.000Z"
 }
 ```
 
-GET localhost:3000/api/v1/urls - get urls
+GET /go/:shortURL - redirect based upon the short URL provided
+
+```json
+{}
+```
+
+GET /api/v1/urls - get urls
 
 ```json
 
 [
   {
     "id": 1,
+    "url": "www.facebook.com",
+    "shortURL": "8q6rdltjrl",
+    "updatedAt": "2016-10-04T22:07:39.000Z",
+    "createdAt": "2016-10-04T22:07:39.000Z"
+  }
+  {
+    "id": 1,
     "url": "http://www.exampleurl.com",
-    "shortURL": "http://bs.com/66vo7fl7r8",
+    "shortURL": "h66vo7fl7r8",
     "createdAt": "2016-10-02T22:19:27.000Z",
     "updatedAt": "2016-10-02T22:19:27.000Z",
     "userID": null
@@ -79,7 +97,7 @@ GET localhost:3000/api/v1/urls - get urls
   {
     "id": 2,
     "url": "http://www.testurl1.com",
-    "shortURL": "http://bs.com/66vo7fl7aq8",
+    "shortURL": "66vo7fl7aq8",
     "createdAt": "2016-10-02T22:19:27.000Z",
     "updatedAt": "2016-10-02T22:19:27.000Z",
     "userID": null
@@ -87,7 +105,7 @@ GET localhost:3000/api/v1/urls - get urls
   {
     "id": 3,
     "url": "http://www.exampleurl2.com",
-    "shortURL": "http://bs.com/66vo7fliar8",
+    "shortURL": "66vo7fliar8",
     "createdAt": "2016-10-02T22:19:27.000Z",
     "updatedAt": "2016-10-02T22:19:27.000Z",
     "userID": null
@@ -95,41 +113,35 @@ GET localhost:3000/api/v1/urls - get urls
 ]
 ```
 
-GET localhost:3000/api/v1/urls/:id - get url by id
+GET /api/v1/urls/:id - get url by id
 
 ```json
 {
   "id": 1,
   "url": "http://www.exampleurl.com",
-  "shortURL": "http://bs.com/66vo7fl7ar8",
+  "shortURL": "66vo7fl7ar8",
   "createdAt": "2016-10-02T22:19:27.000Z",
   "updatedAt": "2016-10-02T22:19:27.000Z",
   "userID": null
 }
 ```
 
-POST localhost:3000/api/v1/urls/:id - update url
+POST /api/v1/urls/:id - update url
 
 ```json
   "url": "http://www.example.com",
-  "shortURL": "http://bs.com/66vo7fl7ar8",
+  "shortURL": "66vo7fl7ar8",
 ```
 
-DELETE localhost:3000/api/v1/urls/:id - delete url
+DELETE /api/v1/urls/:id - delete url
 
 ```json
 1
 ```
 
-GET localhost:3000/go/:shortURL - redirect based upon the short URL provided
-
-```json
-{}
-```
-
 ### Users
 
-POST localhost:3000/api/v1/users - Create user
+POST /api/v1/users - Create user
 
 ```json
 {
@@ -140,7 +152,7 @@ POST localhost:3000/api/v1/users - Create user
 }
 ```
 
-GET localhost:3000/api/v1/users - get users
+GET /api/v1/users - get users
 
 ```json
 
@@ -175,7 +187,7 @@ GET localhost:3000/api/v1/users - get users
 ]
 ```
 
-GET localhost:3000/api/v1/users/:id - get user by id
+GET /api/v1/users/:id - get user by id
 
 ```json
 {
@@ -190,7 +202,7 @@ GET localhost:3000/api/v1/users/:id - get user by id
 }
 ```
 
-POST localhost:3000/api/v1/users/:id - update user
+POST /api/v1/users/:id - update user
 
 ```json
 {
@@ -199,12 +211,11 @@ POST localhost:3000/api/v1/users/:id - update user
 }
 ```
 
-DELETE localhost:3000/api/v1/users/:id - delete user
+DELETE /api/v1/users/:id - delete user
 
 ```json
 1
 ```
-
 
 ##### Contributors
 [View Contributors](https://github.com/seanedw1/URL-Shortener/graphs/contributors)

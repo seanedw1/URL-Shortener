@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-// const bcrypt = require('bcrypt-nodejs');
 require('localenvironment');
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
@@ -27,19 +26,7 @@ const user = sequelize.define('user', {
   tokenreq: {
     type: Sequelize.BOOLEAN,
   },
-}
-// ,
-  // {
-  //   hooks: {
-  //     beforeCreate: () => {
-  //       bcrypt.hashSync(user.password, bcrypt.genSaltSync(8));
-  //     },
-  //     afterValidate: () => {
-  //       bcrypt.compareSync(user.password, this.localpassword);
-  //     },
-  //   },
-  // }
-);
+});
 
 const url = sequelize.define('url', {
   url: {

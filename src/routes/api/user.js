@@ -1,10 +1,14 @@
 const user = require('../../models/user');
+const gen = require('../../models/gen');
 
 module.exports = (express) => {
   const router = express.Router();
 
   // create
   router.post('/users', (req, res) => {
+    const rb = req.body;
+    // hashes password before create
+    rb.password = gen.generateHash(rb.password);
     user.create(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
