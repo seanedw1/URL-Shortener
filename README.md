@@ -32,6 +32,7 @@ run the server
 ```
 node src/server
 ```
+## Usage
 
 ## Endpoints
 
