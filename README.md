@@ -34,6 +34,12 @@ node src/server
 ```
 ## Usage
 
+To start api in debug mode.
+
+```
+DEBUG = true node src/server.js
+```
+
 ## Endpoints
 
 ### Index
