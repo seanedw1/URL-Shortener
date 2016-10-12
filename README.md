@@ -85,7 +85,7 @@ DEBUG = true node src/server.js
 
 ### URL
 
-POST /api/v1/urls - Create shortened link
+#### POST /api/v1/urls - Create shortened link
 
 * when creating new urls include http://
 
@@ -96,13 +96,13 @@ POST /api/v1/urls - Create shortened link
 }
 ```
 
-GET /go/:shortURL - redirect based upon the short URL provided
+#### GET /go/:shortURL - redirect based upon the short URL provided
 
 ```json
 {}
 ```
 
-GET /api/v1/urls - get urls
+#### GET /api/v1/urls - get urls
 
 ```json
 
@@ -133,7 +133,7 @@ GET /api/v1/urls - get urls
 ]
 ```
 
-GET /api/v1/urls/:id - get url by id
+#### GET /api/v1/urls/:id - get url by id
 
 ```json
 {
@@ -146,14 +146,14 @@ GET /api/v1/urls/:id - get url by id
 }
 ```
 
-POST /api/v1/urls/:id - update url
+#### POST /api/v1/urls/:id - update url
 
 ```json
   "url": "http://www.example.com",
   "shortURL": "66vo7fl7ar8",
 ```
 
-DELETE /api/v1/urls/:id - delete url
+#### DELETE /api/v1/urls/:id - delete url
 
 ```json
 1
@@ -161,7 +161,7 @@ DELETE /api/v1/urls/:id - delete url
 
 ### Users
 
-POST /api/v1/users - Create user
+#### POST /api/v1/users - Create user
 
 ```json
 {
@@ -172,7 +172,7 @@ POST /api/v1/users - Create user
 }
 ```
 
-GET /api/v1/users - get users
+#### GET /api/v1/users - get users
 
 ```json
 
@@ -207,7 +207,7 @@ GET /api/v1/users - get users
 ]
 ```
 
-GET /api/v1/users/:id - get user by id
+#### GET /api/v1/users/:id - get user by id
 
 ```json
 {
@@ -222,7 +222,7 @@ GET /api/v1/users/:id - get user by id
 }
 ```
 
-POST /api/v1/users/:id - update user
+#### POST /api/v1/users/:id - update user
 
 ```json
 {
@@ -231,7 +231,7 @@ POST /api/v1/users/:id - update user
 }
 ```
 
-DELETE /api/v1/users/:id - delete user
+#### DELETE /api/v1/users/:id - delete user
 
 ```json
 1
