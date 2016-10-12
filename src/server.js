@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const util = require('../tools/util');
+
 
 // express functionality
 const app = express();
@@ -20,7 +22,7 @@ app.use('/', require('./routes')(express));
 
 // sets server to listening port
 const server = app.listen(port, () => {
-  console.log('server active on ' + port);
+  util.debug('server active on ' + port);
 });
 
 // makes server modular

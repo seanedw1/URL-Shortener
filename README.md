@@ -27,7 +27,7 @@ create a env.json on root level for database connection
 
 ## Server
 
-run the server
+start the server
 
 ```
 node src/server
