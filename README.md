@@ -43,10 +43,10 @@ DEBUG = true node src/server.js
 ## Endpoints
 
 ### Index
-* [Hello world](#Index)
+* [Hello world](#index-1)
 
 ### Status
-* [Api Status](#Status)
+* [Api Status](#status-1)
 
 ### crud for urls
 * [create an url](#POST /api/v1/urls - Create shortened)
@@ -73,9 +73,9 @@ DEBUG = true node src/server.js
   "hello": "world"
 }
 ```
-### Status
+##### Status
 
-##### GET /status - api status
+#### GET /status - api status
 
 ```json
 {
