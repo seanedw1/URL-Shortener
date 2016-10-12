@@ -1,6 +1,6 @@
 .DS_store
 node_modules
-.env
-env.json
 .log
 .logs
+.env
+env.json

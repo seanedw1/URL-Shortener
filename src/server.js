@@ -22,7 +22,7 @@ app.use('/', require('./routes')(express));
 
 // sets server to listening port
 const server = app.listen(port, () => {
-  util.debug('server active on ' + port);
+  util.debug(' server active on ' + port);
 });
 
 // makes server modular

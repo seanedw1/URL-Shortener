@@ -1,13 +1,16 @@
 const db = require('./db');
+const util = require('../../tools/util');
 
 // create
 exports.create = (payload, err, success) => {
   db.url.create(payload).then(success).catch(err);
+  util.debug('Create url model');
 };
 
 // find all
 exports.findAll = (err, success) => {
   db.url.findAll().then(success).catch(err);
+  util.debug(' Read all url model');
 };
 
 // find by id
@@ -23,6 +26,7 @@ exports.find = (payload, err, success) => {
       nested: true,
     }],
   }).then(success).catch(err);
+  util.debug('Read url by id model');
 };
 
 // redirect
@@ -33,6 +37,7 @@ exports.go = (payload, err, success) => {
       shortURL: payload.shortURL,
     },
   }).then(success).catch(err);
+  util.debug('Redirect url model');
 };
 
 // update
@@ -44,6 +49,7 @@ exports.update = (payload, err, success) => {
   }).then((existingData) => {
     existingData.updateAttributes(payload).then(success).catch(err);
   }).catch(err);
+  util.debug('Update url model');
 };
 
 // delete
@@ -53,4 +59,5 @@ exports.destroy = (payload, err, success) => {
       id: payload.id,
     },
   }).then(success).catch(err);
+  util.debug('Delete url model');
 };
