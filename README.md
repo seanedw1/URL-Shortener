@@ -40,6 +40,20 @@ To start api in debug mode.
 DEBUG = true node src/server.js
 ```
 
+## Unit Testing
+
+To run unit test.
+
+*sever must be off
+
+```
+mocha
+
+or
+
+npm test
+```
+
 ## Endpoints
 
 ### Index

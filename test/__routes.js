@@ -70,6 +70,8 @@
  ];
 
  describe('routes', () => {
+   let server;
+
    for (let i = 0; i < routes.length; i++) {
      it(routes[i].description, () => {});
    }
