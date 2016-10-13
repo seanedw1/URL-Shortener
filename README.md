@@ -49,20 +49,20 @@ DEBUG = true node src/server.js
 * [Api Status](#status-1)
 
 ### crud for urls
-* [create an url](#POST /api/v1/urls - Create shortened)
-* [read all url](#GET /api/v1/urls - get urls)
-* [read url by id](#GET /api/v1/urls/:id - get url by id
+* [create an url](#post-apiv1urls---create-shortened-link)
+* [read all url](#get-apiv1urls---get-urls)
+* [read url by id](#get-apiv1urlsid---get-url-by-id
 )
-* [redirect based upon the short URL provided](#GET /go/:shortURL - redirect to short URL provided)
-* [update url](#POST /api/v1/urls/:id - update url)
-* [delete url](#DELETE /api/v1/urls/:id - delete url)
+* [redirect based upon the short URL provided](#get-goshorturl---redirect-based-upon-the-short-url-provided)
+* [update url](#post-apiv1urlsid---update-url)
+* [delete url](#delete-apiv1urlsid---delete-url)
 
 ### crud for users
-* [create an user](#POST /api/v1/users - Create user)
-* [read all user](#GET-/api/v1/users -get-users)
-* [read user by id](#GET /api/v1/urls/:id - get url by id)
-* [update user](#POST /api/v1/urls/:id - update url)
-* [delete user](#DELETE /api/v1/users/:id - delete user)
+* [create an user](#post-apiv1users---create-user)
+* [read all user](#get-apiv1users---get-users)
+* [read user by id](#get-apiv1usersid---get-user-by-id)
+* [update user](#post-apiv1usersid---update-user)
+* [delete user](#delete-apiv1usersid---delete-user)
 
 ### Index
 
