@@ -1,4 +1,5 @@
  const request = require('supertest');
+ const util = require('../tools/util');
 
 // array of all routes
  const routes = [
@@ -28,7 +29,7 @@
      method: 'get',
    },
    {
-     description: 'Redirect url by',
+     description: 'Redirect url',
      route: 'go/:shortURL',
      method: 'get',
    },
@@ -69,10 +70,52 @@
    },
  ];
 
- describe('routes', () => {
+ // routes
+ describe('Routes', () => {
    let server;
 
+ // before each instance
+   beforeEach(() => {
+     server = require('../src/server');
+   });
+
+ // after each instance
+   afterEach(() => {
+     server.close();
+   });
+
+ // loop through routes
    for (let i = 0; i < routes.length; i++) {
-     it(routes[i].description, () => {});
+ // it statement gives description of what test is suppose to do
+     it(routes[i].description, () => {
+     // if methed is equal to get
+       if (routes[i].method === 'get') {
+         request(server)
+         .get(routes[i])
+         .set('Accept', 'application/json')
+         .expect('Content-Type', /json/)
+         .expect(200)
+         .end();
+         util.debug('sucess on get', 'sucess');
+       } else if (routes[i].method === 'post') {
+         request(server)
+         .post(routes[i])
+         .set('Accept', 'application/json')
+         .expect('Content-Type', /json/)
+         .expect(200)
+         .end();
+         util.debug('sucess on post', 'sucess');
+       } else {
+         request(server)
+         .delete(routes[i])
+         .set('Accept', 'application/json')
+         .expect('Content-Type', /json/)
+         .expect(200)
+         .end();
+         util.debug('sucess on delete', 'sucess');
+       }
+     // closing of the it statement
+     });
    }
+   // closing describe
  });
