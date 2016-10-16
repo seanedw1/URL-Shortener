@@ -7,7 +7,9 @@
 Install all dependencies.
 
 ```
-npm i
+npm install
+
+npm install -g mocha
 ```
 
 ## ENV
@@ -31,13 +33,6 @@ start the server
 
 ```
 node src/server
-```
-## Usage
-
-To start api in debug mode.
-
-```
-DEBUG=true node src/server.js
 ```
 
 ## Unit Testing
