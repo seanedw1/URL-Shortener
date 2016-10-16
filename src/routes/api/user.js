@@ -1,6 +1,6 @@
 const user = require('../../models/user');
 const gen = require('../../models/gen');
-const util = require('../../../tools/util');
+const remer = require('remer');
 
 
 module.exports = (express) => {
@@ -13,10 +13,10 @@ module.exports = (express) => {
     rb.password = gen.generateHash(rb.password);
     user.create(req.body, (err) => {
       res.status(500).json(err);
-      util.debug(' Create user fail', 'fail');
+      remer.debug(' Create user fail', 'fail');
     }, (data) => {
       res.status(200).json(data);
-      util.debug(' Create user sucess', 'sucess');
+      remer.debug(' Create user sucess', 'sucess');
     });
   });
 
@@ -24,10 +24,10 @@ module.exports = (express) => {
   router.get('/users', (req, res) => {
     user.findAll((err) => {
       res.status(500).json(err);
-      util.debug(' Read all user fail', 'fail');
+      remer.debug(' Read all user fail', 'fail');
     }, (data) => {
       res.status(200).json(data);
-      util.debug(' Read all user sucess', 'sucess');
+      remer.debug(' Read all user sucess', 'sucess');
     });
   });
 
@@ -37,10 +37,10 @@ module.exports = (express) => {
     rb.id = req.params.id;
     user.find(req.body, (err) => {
       res.status(500).json(err);
-      util.debug(' Read user by id fail', 'fail');
+      remer.debug(' Read user by id fail', 'fail');
     }, (data) => {
       res.status(200).json(data);
-      util.debug(' Read user by id sucess', 'sucess');
+      remer.debug(' Read user by id sucess', 'sucess');
     });
   });
 
@@ -52,10 +52,10 @@ module.exports = (express) => {
     rb.password = gen.generateHash(rb.password);
     user.update(req.body, (err) => {
       res.status(500).json(err);
-      util.debug(' Update user fail', 'fail');
+      remer.debug(' Update user fail', 'fail');
     }, (data) => {
       res.status(200).json(data);
-      util.debug(' Update user sucess', 'sucess');
+      remer.debug(' Update user sucess', 'sucess');
     });
   });
 
@@ -65,10 +65,10 @@ module.exports = (express) => {
     rb.id = req.params.id;
     user.destroy(req.body, (err) => {
       res.status(500).json(err);
-      util.debug(' Delete user fail', 'fail');
+      remer.debug(' Delete user fail', 'fail');
     }, (data) => {
       res.status(200).json(data);
-      util.debug(' Delete user sucess', 'sucess');
+      remer.debug(' Delete user sucess', 'sucess');
     });
   });
 

@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const Url = require('../src/models/url');
 const gen = require('../src/models/gen');
-const util = require('../tools/util');
+const remer = require('remer');
 
 describe('url model', () => {
   let testUrl = {
@@ -16,7 +16,7 @@ describe('url model', () => {
   it('Create url', (done) => {
     // create method
     Url.create(testUrl, (fail) => {
-      util.debug('failed to create mock url', fail);
+      remer.debug('failed to create mock url', fail);
     }, (url) => {
       testId = url.id;
       shortURL = url.shortURL;
@@ -31,7 +31,7 @@ describe('url model', () => {
   it('Read all urls', (done) => {
     // read all method
     Url.findAll((fail) => {
-      util.debug('failed to read all users', fail);
+      remer.debug('failed to read all users', fail);
     // sucess callback
     }, (urls) => {
       this.testUrls = urls;
@@ -48,7 +48,7 @@ describe('url model', () => {
     };
   // read by id method
     Url.find(testDemo, (fail) => {
-      util.debug('failed to read by id url', fail);
+      remer.debug('failed to read by id url', fail);
     // sucess callback
     }, (url) => {
       expect(url.id).to.be.equal(testId);
@@ -64,7 +64,7 @@ describe('url model', () => {
     };
   // read by id method
     Url.go(testDemo, (fail) => {
-      util.debug('failed to redirect', fail);
+      remer.debug('failed to redirect', fail);
     // sucess callback
     }, (url) => {
       expect(url.shortURL).to.be.equal(shortURL);
@@ -83,7 +83,7 @@ describe('url model', () => {
     };
     // update method
     Url.update(testUrl, (fail) => {
-      util.debug('failed to update mock url', fail);
+      remer.debug('failed to update mock url', fail);
     // sucess callback
     }, (url) => {
       expect(url.dataValues.url).to.be.equal(testUrl.url);
@@ -96,7 +96,7 @@ describe('url model', () => {
   it('Delete url', (done) => {
     // delete method
     Url.destroy(testUrl, (fail) => {
-      util.debug('failed to delete mock url', fail);
+      remer.debug('failed to delete mock url', fail);
     // sucess callback
     }, (res) => {
       expect(res).to.be.equal(1);

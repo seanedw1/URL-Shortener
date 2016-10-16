@@ -1,6 +1,6 @@
 {
   "name": "url-shortener",
-  "version": "1.5.1",
+  "version": "1.6.1",
   "description": "simplified URL shortener application",
   "main": "src/server",
   "scripts": {
@@ -27,6 +27,7 @@
     "localenvironment": "^1.0.2",
     "mocha": "^3.1.2",
     "mysql": "^2.11.1",
+    "remer": "^1.0.0",
     "sequelize": "^3.24.3",
     "supertest": "^2.0.0"
   },

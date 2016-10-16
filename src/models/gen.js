@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt-nodejs');
-const util = require('../../tools/util');
+const remer = require('remer');
 
 // sets generate module
 exports.genURL = () => {
@@ -11,7 +11,7 @@ exports.genURL = () => {
   for (let i = 0; i < 5; i++) {
     URLId += string.charAt(Math.floor(Math.random() * string.length));
   }
-  util.debug('generates short url model');
+  remer.debug('generates short url model');
   // returns short url
   return URLId;
 };
@@ -20,7 +20,7 @@ exports.genURL = () => {
 exports.generateHash = (payload) => {
   // generates password hash
   const hash = bcrypt.hashSync(payload, bcrypt.genSaltSync(8));
-  util.debug('generates hashed password model');
+  remer.debug('generates hashed password model');
   // returns hashed password
   return hash;
 };
@@ -29,7 +29,7 @@ exports.generateHash = (payload) => {
 exports.validateHash = (payload) => {
   // compares pasword returns in BOOLEAN
   const hash = bcrypt.compareSync(payload.password, this.localpassword);
-  util.debug('compares hashed password model');
+  remer.debug('compares hashed password model');
   // return boolean
   return hash;
 };

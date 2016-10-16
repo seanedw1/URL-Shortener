@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const util = require('../tools/util');
+const remer = require('remer');
 
 
 // express functionality
@@ -22,7 +22,7 @@ app.use('/', require('./routes')(express));
 
 // sets server to listening port
 const server = app.listen(port, () => {
-  util.debug(' server active on ' + port);
+  remer.debug(' server active on ' + port);
 });
 
 // makes server modular

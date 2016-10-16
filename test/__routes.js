@@ -1,5 +1,5 @@
  const request = require('supertest');
- const util = require('../tools/util');
+ const remer = require('remer');
 
 // array of all routes
  const routes = [
@@ -96,7 +96,7 @@
          .expect('Content-Type', /json/)
          .expect(200)
          .end();
-         util.debug('sucess on get', 'sucess');
+         remer.debug('sucess on get', 'sucess');
        } else if (routes[i].method === 'post') {
          request(server)
          .post(routes[i])
@@ -104,7 +104,7 @@
          .expect('Content-Type', /json/)
          .expect(200)
          .end();
-         util.debug('sucess on post', 'sucess');
+         remer.debug('sucess on post', 'sucess');
        } else {
          request(server)
          .delete(routes[i])
@@ -112,7 +112,7 @@
          .expect('Content-Type', /json/)
          .expect(200)
          .end();
-         util.debug('sucess on delete', 'sucess');
+         remer.debug('sucess on delete', 'sucess');
        }
      // closing of the it statement
      });

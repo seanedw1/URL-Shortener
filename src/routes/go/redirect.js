@@ -1,5 +1,5 @@
 const url = require('../../models/url');
-const util = require('../../../tools/util');
+const remer = require('remer');
 
 
 module.exports = (express) => {
@@ -11,10 +11,10 @@ module.exports = (express) => {
     rb.shortURL = req.params.shortURL;
     url.go(req.body, (err) => {
       res.status(500).json(err);
-      util.debug(' url redirect fail', 'fail');
+      remer.debug(' url redirect fail', 'fail');
     }, (data) => {
       res.redirect(data.url);
-      util.debug(' url redirect sucess', 'sucess');
+      remer.debug(' url redirect sucess', 'sucess');
     });
   });
   // returns correct data

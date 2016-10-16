@@ -1,4 +1,4 @@
-const util = require('../../tools/util');
+const remer = require('remer');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -6,13 +6,13 @@ module.exports = (express) => {
   // route to get hello world
   router.get('/', (req, res) => {
     res.json({ hello: 'world' });
-    util.debug('api index hit', 'sucess');
+    remer.debug('api index hit', 'sucess');
   });
 
   // route to check api status
   router.get('/status', (req, res) => {
     res.json({ healty: true });
-    util.debug('api status hit', 'sucess');
+    remer.debug('api status hit', 'sucess');
   });
 
   // linking routes
