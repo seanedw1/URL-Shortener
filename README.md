@@ -37,7 +37,7 @@ node src/server
 To start api in debug mode.
 
 ```
-DEBUG = true node src/server.js
+DEBUG=true node src/server.js
 ```
 
 ## Unit Testing
