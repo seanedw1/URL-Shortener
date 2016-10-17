@@ -12,6 +12,9 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     idle: 10000,
   },
   logging: false,
+  dialectOptions: {
+    socketPath: '/etc/mysql/my.cnf',
+  },
 });
 
 // defines user table
