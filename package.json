@@ -1,6 +1,9 @@
 {
   "name": "url-shortener",
   "version": "1.8.0",
+  "engines": {
+    "node": "6.2.0"
+  },
   "description": "simplified URL shortener application",
   "main": "src/server",
   "scripts": {
