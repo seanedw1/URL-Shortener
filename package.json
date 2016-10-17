@@ -2,7 +2,8 @@
   "name": "url-shortener",
   "version": "1.8.0",
   "engines": {
-    "node": "6.2.0"
+    "node": "v6.8.1"
+    "npm": "v3.10.5"
   },
   "description": "simplified URL shortener application",
   "main": "src/server",
@@ -21,7 +22,6 @@
   },
   "homepage": "https://github.com/seanedw1/URL-Shortener#readme",
   "dependencies": {
-    "bcrypt": "^0.8.7",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "chai": "^3.5.0",
