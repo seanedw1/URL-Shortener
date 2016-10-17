@@ -55,6 +55,15 @@ npm test
 
 ## Deployment
 
+1. First we merge our codebase to master our ci test runs to confirm our codebase is passing our automated unit test.
+
+2. If our codebase passes ci test (codeship) we manually merge master branch to the release branch
+which is the first step in the deployment pipeline.
+
+3. When ci tool (codeship) confirms the build is good it will automatically be deployed from release repo onto our staging server.
+
+4. once completed and we confirmed out codebase is good we will manually push from staging server to production server.
+
 ## Endpoints
 
 ### Index

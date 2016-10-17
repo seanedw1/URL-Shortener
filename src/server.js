@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const remer = require('remer');
 
-
 // express functionality
 const app = express();
 
@@ -16,6 +15,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true,
 }));
+
+// formatting json
+app.set('json spaces', 2);
 
 // link routes
 app.use('/', require('./routes')(express));
