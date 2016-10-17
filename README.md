@@ -1,5 +1,7 @@
 # URL-Shortener
 
+[ ![codeship status for seanedw1/URL-Shortener](https://codeship.com/projects/a4f6d2c0-739e-0134-dcf7-2221f4e2997e/status?branch=master)](https://app.codeship.com/projects/178965)
+
 ###### simplified URL shortener application
 
 ## Package dependencies
@@ -48,6 +50,10 @@ or
 
 npm test
 ```
+
+##Workflow
+
+##Deployment
 
 ## Endpoints
 
