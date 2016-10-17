@@ -53,6 +53,47 @@ npm test
 
 ## Workflow
 
+1. Create a new feature branch
+```
+git checkout -b branchname
+```
+
+2. Push up to new feature branch
+```
+git add -A
+git commit -m 'insert your msg here'
+git push
+```
+ if this is your first time pushing to a new remote branch run
+```
+git push --set-upstream origin branchname
+```
+3. Once commited we return to the master branch to merge (pull in) the feature branch
+```
+git checkout master
+```
+4. Now in the master branch merge your feature branch into your master branch using the merge command followed by a push
+```
+git merge branchname
+git push
+```
+5. Now that we have successfully merged our feature branch our ci tool(codeship) will check to make sure our codebase is passing.
+
+6. Once codeship confirms that the build passes we want to tag this version then merge our master into our release branch.
+
+7. Create a tag run
+```
+git tag v1.0.6 commitidgoeshere
+```
+
+8. Once we have created our tag we want to continue with our merge to the release branch
+```
+git checkout release
+git merge master
+git push
+```
+9. Once we push to release branch our codebase enters the first phase of the Deployment pipeline
+
 ## Deployment
 
 1. First we merge our codebase to master our ci test runs to confirm our codebase is passing our automated unit test.
