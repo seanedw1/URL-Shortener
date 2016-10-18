@@ -27,6 +27,5 @@ app.use('/', require('./routes')(express));
 const server = app.listen(port, () => {
   remer.debug(' server active on ' + port);
 });
-
 // makes server modular
 module.exports = server;
