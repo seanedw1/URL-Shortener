@@ -1,7 +1,8 @@
 // links to link generation model
 const gen = require('../../models/gen');
 const url = require('../../models/url');
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../../../demo_logger/src/util');
 
 
 // accepts express as a parameter of express

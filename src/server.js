@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../demo_logger/src/util');
 
 // express functionality
 const app = express();
