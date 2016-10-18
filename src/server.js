@@ -6,7 +6,7 @@ const remer = require('remer');
 const app = express();
 
 // sets port to 3000
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // parses text as json
 app.use(bodyParser.json());
