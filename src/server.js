@@ -21,6 +21,9 @@ app.set('json spaces', 2);
 
 // link routes
 app.use('/', require('./routes')(express));
+app.use('/api/v1/', require('./routes/api/url')(express));
+app.use('/api/v1/', require('./routes/api/user')(express));
+app.use('/go/', require('./routes/go/redirect')(express));
 
 // sets server to listening port
 const server = app.listen(port, () => {
