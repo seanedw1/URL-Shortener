@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const git = require('gulp-git');
 const gitignore = require('gulp-gitignore');
 const remer = require('remer').versionBump;
+const pkjsn = require('./package.json');
 const version = require('./package.json').version;
 const argv = require('yargs').argv;
 
@@ -14,6 +15,7 @@ gulp.task('bump', () => {
   } else {
     remer(version, 'patch');
   }
+// closes bump task
 });
 
 gulp.task('add', () => {

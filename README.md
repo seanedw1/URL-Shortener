@@ -11,7 +11,7 @@ Install all dependencies.
 ```
 npm install
 
-npm install -g mocha
+npm install -g mocha gulp
 ```
 
 ## ENV

@@ -1,6 +1,6 @@
 {
   "name": "url-shortener",
-  "version": "1.11.0",
+  "version": "1.11.1p",
   "engines": {
     "node": "v6.8.1",
     "npm": "v3.10.8"
@@ -27,13 +27,14 @@
     "chai": "^3.5.0",
     "colors": "^1.1.2",
     "express": "^4.14.0",
+    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-git": "^1.12.0",
     "gulp-gitignore": "^0.1.0",
     "localenvironment": "^1.0.2",
     "mocha": "^3.1.2",
     "mysql": "^2.11.1",
-    "remer": "^1.0.0",
+    "remer": "^1.0.4",
     "sequelize": "^3.24.3",
     "supertest": "^2.0.0",
     "yargs": "^6.3.0"
