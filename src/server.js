@@ -21,8 +21,6 @@ app.set('json spaces', 2);
 
 // link routes
 app.use('/', require('./routes')(express));
-app.use('/status', require('./routes')(express));
-
 
 // sets server to listening port
 const server = app.listen(port, () => {
