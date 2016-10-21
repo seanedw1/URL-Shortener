@@ -1,19 +1,34 @@
 const gulp = require('gulp');
 const git = require('gulp-git');
+const jeditor = require('gulp-json-editor');
 const gitignore = require('gulp-gitignore');
 const remer = require('remer').versionBump;
-const pkjsn = require('./package.json');
 const version = require('./package.json').version;
 const argv = require('yargs').argv;
 
 
 gulp.task('bump', () => {
+  // if major
   if (argv.major) {
-    remer(version, 'major');
+    gulp.src('./package.json')
+      .pipe(jeditor({
+        version: remer(version, 'major'),
+      }))
+      .pipe(gulp.dest('./'));
+  // if minor
   } else if (argv.minor) {
-    remer(version, 'minor');
+    gulp.src('./package.json')
+      .pipe(jeditor({
+        version: remer(version, 'minor'),
+      }))
+      .pipe(gulp.dest('./'));
+  // if patch
   } else {
-    remer(version, 'patch');
+    gulp.src('./package.json')
+      .pipe(jeditor({
+        version: remer(version, 'patch'),
+      }))
+      .pipe(gulp.dest('./'));
   }
 // closes bump task
 });
@@ -21,17 +36,17 @@ gulp.task('bump', () => {
 gulp.task('add', () => {
   return gulp.src('./*')
   .pipe(gitignore())
-    .pipe(git.add());
+  .pipe(git.add());
 });
 
 gulp.task('commit', () => {
   return gulp.src('./*')
   .pipe(gitignore())
-    .pipe(git.commit('initial commit'));
+  .pipe(git.commit('initial commit'));
 });
 
 gulp.task('push', () => {
-  git.push('origin', 'gulp', (err) => {
+  git.push('origin', 'master', (err) => {
     if (err) throw err;
   });
 });
