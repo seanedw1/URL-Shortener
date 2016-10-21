@@ -19,7 +19,6 @@ gulp.task('bump', () => {
 gulp.task('add', () => {
   return gulp.src('./*')
   .pipe(gitignore())
-     .pipe(gulp.dest('dist'))
     .pipe(git.add());
 });
 
