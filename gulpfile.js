@@ -18,13 +18,14 @@ gulp.task('bump', () => {
 
 gulp.task('add', () => {
   return gulp.src('./*')
-    .pipe(gitignore())
+  .pipe(gitignore())
+     .pipe(gulp.dest('dist'))
     .pipe(git.add());
 });
 
 gulp.task('commit', () => {
   return gulp.src('./*')
-    .pipe(gitignore())
+  .pipe(gitignore())
     .pipe(git.commit('initial commit'));
 });
 
