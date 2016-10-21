@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const git = require('gulp-git');
 const gitignore = require('gulp-gitignore');
-// const remer = require('./util/src/util').versionBump;
+const remer = require('remer').versionBump;
 const version = require('./package.json').version;
 const argv = require('yargs').argv;
 
