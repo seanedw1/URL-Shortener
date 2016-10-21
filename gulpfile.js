@@ -42,7 +42,7 @@ gulp.task('add', () => {
 gulp.task('commit', () => {
   return gulp.src('./*')
   .pipe(gitignore())
-  .pipe(git.commit('initial commit'));
+  .pipe(git.commit('gulp commited'));
 });
 
 gulp.task('push', () => {

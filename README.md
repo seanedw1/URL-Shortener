@@ -4,6 +4,21 @@
 
 ###### simplified URL shortener application
 
+## Table of contents
+
+
+* [Package dependencies](#package-dependencies)
+* [ENV](#env)
+* [Server](#server)
+* [Unit Testing](#unit-testing)
+* [Gulp](#)
+* [Workflow](#workflow)
+* [Deployment](#deployment)
+* [Endpoints](#endpoints)
+* [contributors](#contributors)
+* [Airbnb style guide](#style-guide-reference)
+
+
 ## Package dependencies
 
 Install all dependencies.
