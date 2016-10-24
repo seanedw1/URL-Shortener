@@ -10,8 +10,8 @@
 * [ENV](#env)
 * [Server](#server)
 * [Unit Testing](#unit-testing)
-* [Gulp](#)
-* [Vps](#)
+* [Gulp](#gulp)
+* [Vps](#virtual-private-server)
 * [Workflow](#workflow)
 * [Deployment](#deployment)
 * [Endpoints](#endpoints)
@@ -66,10 +66,30 @@ or
 npm test
 ```
 ## Gulp
+
+gulp is used to automate a github commit so first it adds all file changes followed by a commit message then a push to origin master.
+to use this automated feature in terminal use
+
+```
+gulp
+```
+
+This project uses gulp for automated package.json version bump
+
+```
+// bump up major
+gulp bump --major
+
+// bump up minor
+gulp bump --minor
+
+// bump up minor
+gulp bump --patch
+```
+
 ## Virtual private server
 API on virtual private server
-[youtube](https://github.com/airbnb/javascript)
-
+[youtube](https://www.youtube.com/watch?v=Lw4nFTBkERI)
 
 ## Workflow
 
