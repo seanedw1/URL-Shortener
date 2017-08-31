@@ -79,11 +79,6 @@
      server = require('../src/server');
    });
 
- // after each instance
-   afterEach(() => {
-     server.close();
-   });
-
  // loop through routes
    for (let i = 0; i < routes.length; i++) {
  // it statement gives description of what test is suppose to do
