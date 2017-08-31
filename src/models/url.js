@@ -1,5 +1,6 @@
 const db = require('./db');
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../../demo_logger/src/util');
 
 // create
 exports.create = (payload, err, success) => {

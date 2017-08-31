@@ -1,6 +1,7 @@
 const user = require('../../models/user');
 const gen = require('../../models/gen');
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../../../demo_logger/src/util');
 
 
 module.exports = (express) => {

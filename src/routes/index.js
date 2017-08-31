@@ -1,4 +1,5 @@
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../../demo_logger/src/util');
 
 module.exports = (express) => {
   const router = express.Router();
