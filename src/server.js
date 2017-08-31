@@ -5,6 +5,12 @@ const remer = require('remer');
 // express functionality
 const app = express();
 
+// set template engine
+app.set('view engine', 'pug')
+
+//
+app.set('views','./public/views');
+
 // sets port to 3000
 const port = process.env.PORT || 3000;
 

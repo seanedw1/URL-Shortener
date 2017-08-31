@@ -5,8 +5,10 @@ module.exports = (express) => {
 
   // route to get hello world
   router.get('/', (req, res) => {
-    res.json({ hello: 'world' });
-    remer.debug('api index hit', 'sucess');
+    res.render(
+        'index',
+        { title: 'Hey Hey Hey!', message: 'Yo Yo'});
+   remer.debug('api index hit', 'sucess');
   });
 
   // route to check api status
