@@ -199,8 +199,7 @@ which is the first step in the deployment pipeline.
 
 ```json
 {
-  "url": "http://www.facebook.com/",
-  "shortURL": "8q6rdltjrl",
+  "url": "http://www.facebook.com/"
 }
 ```
 
@@ -258,7 +257,7 @@ which is the first step in the deployment pipeline.
 
 ```json
   "url": "http://www.example.com",
-  "shortURL": "66vo7fl7ar8",
+  "shortURL": "66vo7fl7ar8"
 ```
 
 #### DELETE /api/v1/urls/:id - delete url
@@ -273,10 +272,9 @@ which is the first step in the deployment pipeline.
 
 ```json
 {
-  "name": "bart",
-  "username": "simpsonsfan",
-  "password": "testpass",
-
+	"name": "bart",
+	"username": "simpsonsfan",
+	"password": "testpass"
 }
 ```
 
@@ -335,7 +333,7 @@ which is the first step in the deployment pipeline.
 ```json
 {
   "name": "bart",
-  "username": "simpsonsfan",
+  "username": "simpsonsfan"
 }
 ```
 
