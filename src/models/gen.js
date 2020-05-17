@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt-nodejs');
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../../demo_logger/src/util');
 
 // sets generate module
 exports.genURL = () => {

@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const remer = require('remer');
+// const remer = require('remer');
+const remer = require('../demo_logger/src/util');
 
 // express functionality
 const app = express();
@@ -26,6 +27,5 @@ app.use('/', require('./routes')(express));
 const server = app.listen(port, () => {
   remer.debug(' server active on ' + port);
 });
-
 // makes server modular
 module.exports = server;
